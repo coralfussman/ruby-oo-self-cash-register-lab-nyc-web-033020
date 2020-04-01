@@ -13,6 +13,7 @@ def add_item(title, price, quantity = 1)
  quantity.times { @items << title }
 total_quant_price = price * quantity.to_f
 self.total += total_quant_price
+ @last_transaction = price * quantity
 end
 
 def void_last_transaction
