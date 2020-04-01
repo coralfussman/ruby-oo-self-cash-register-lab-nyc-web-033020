@@ -15,9 +15,6 @@ total_quant_price = price * quantity.to_f
 self.total += total_quant_price
 end
 
-def void_last_transaction
-    @total -= @last_transaction
-  end
 
 def apply_discount
 if  @discount == 0
@@ -27,4 +24,8 @@ else self.total *= (100 - discount)/100.0
 "After the discount, the total comes to $#{self.total}."
 end
 end
+
+def void_last_transaction
+    @total -= @last_transaction
+  end
 end
